@@ -26,9 +26,9 @@ export default function updateAutoHeight(speed) {
         swiper.visibleSlides = [];
       }
 
-      swiper.visibleSlides.each(slide => {
+      for (const slide of swiper.visibleSlides) {
         activeSlides.push(slide);
-      });
+      }
     } else {
       for (i = 0; i < Math.ceil(swiper.params.slidesPerView); i += 1) {
         const index = swiper.activeIndex + i;
